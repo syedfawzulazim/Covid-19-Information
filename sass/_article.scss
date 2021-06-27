@@ -1,0 +1,53 @@
+.article {
+  width: 100%;
+  height: calc(100vh - 60px);
+  min-height: 350px;
+  color: #fff;
+  background: linear-gradient(to right, #314755, #26a0da);
+  background-size: cover;
+  padding: 10px;
+
+  &__left {
+    width: 60%;
+
+    .article__item {
+      background-color: rgb(45, 135, 195);
+      border-radius: 5px;
+      box-shadow: 20px 20px 30px rgba($color: #000000, $alpha: 0.15);
+      transition: transform 300ms ease-in-out;
+      &:hover {
+        transform: scale(1.05);
+        box-shadow: 10px 10px 30px rgba($color: rgb(255, 188, 4), $alpha: 0.15);
+      }
+    }
+    .article__title {
+      text-align: center;
+      padding: 5px;
+      background-color: rgb(19, 14, 6);
+    }
+    .article__text {
+      text-align: center;
+      padding: 10px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    height: fit-content;
+
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  &__right {
+    width: 40%;
+    background-color: rgb(54, 79, 87);
+  }
+}
