@@ -221,6 +221,12 @@ a {
   width: 60%;
 }
 
+@media (max-width: 63.9375em) {
+  .article__left {
+    width: 100%;
+  }
+}
+
 .article__left .article__item {
   background-color: #2d87c3;
   border-radius: 5px;
@@ -263,6 +269,12 @@ a {
   border-collapse: collapse;
 }
 
+@media (max-width: 63.9375em) {
+  .article__left .days {
+    margin: 0 auto;
+  }
+}
+
 .article__grid {
   display: -ms-grid;
   display: grid;
@@ -291,6 +303,24 @@ a {
 
 .article__right {
   width: 40%;
-  background-color: #364f57;
+  background-color: rgba(245, 245, 245, 0.9);
+  border-radius: 20px;
+  padding: 20px;
+}
+
+@media (max-width: 63.9375em) {
+  .article__right {
+    width: 100%;
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 63.9375em) {
+  .article {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 /*# sourceMappingURL=main.css.map */

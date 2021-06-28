@@ -10,6 +10,8 @@
     <!--  CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="/sass/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+
 </head>
 
 <body>
@@ -98,39 +100,32 @@
             </div>
 
 
-            <div class="days">
+            <div class="days flex flex-col flex-jc-c flex-ai-c">
                 <h5>Last 7 days Information</h5>
-
                 <table>
                     <thead>
                         <tr>
                             <th>Date</th>
                             <th>Cases</th>
                             <th>Recovered</th>
-
                         </tr>
                     </thead>
                     <tbody class="tbody">
 
                     </tbody>
                 </table>
-
             </div>
-
-
 
 
         </div>
 
 
         <div class="article__right">
-            <h2>ww</h2>
+            <canvas id="myChart"></canvas>
         </div>
 
 
     </section>
-
-
 
 
     <!-- Optional JavaScript -->

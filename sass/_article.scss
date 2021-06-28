@@ -9,6 +9,9 @@
 
   &__left {
     width: 60%;
+    @include breakpoint-down(medium) {
+      width: 100%;
+    }
 
     .article__item {
       background-color: rgb(45, 135, 195);
@@ -42,6 +45,9 @@
         width: 60%;
         border-collapse: collapse;
       }
+      @include breakpoint-down(medium) {
+        margin: 0 auto;
+      }
     }
   }
 
@@ -63,6 +69,17 @@
 
   &__right {
     width: 40%;
-    background-color: rgb(54, 79, 87);
+    background-color: rgba(245, 245, 245, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+
+    @include breakpoint-down(medium) {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+
+  @include breakpoint-down(medium) {
+    flex-direction: column;
   }
 }
