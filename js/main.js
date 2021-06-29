@@ -109,10 +109,41 @@ function getAge() {
             male.push(obj["A80+"].casesMale);
             female.push(obj["A80+"].casesFemale);
 
-
+            // console.log(obj)
         })
 }
 
+
+//getAge();
+let states = [];
+let cases = [], deaths = [], recovered = [];
+
+function getStates() {
+    fetch('https://api.corona-zahlen.org/states')
+        .then(res => {
+            return res.json();
+        })
+        .then(data => {
+            const obj = data.data;
+            //console.log(obj)
+            Object.entries(obj)
+                .forEach(([key]) => {
+                    states.push(key)
+                })
+
+            //console.log(states)
+
+            states.forEach(key => {
+                cases.push(obj[key].cases)
+                deaths.push(obj[key].deaths)
+                recovered.push(obj[key].recovered)
+            })
+        })
+}
+
+
+
+//console.log(states)
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
@@ -124,14 +155,14 @@ var myChart = new Chart(ctx, {
             {
                 label: 'Male',
                 data: male,
-                backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                borderColor: 'rgba(255,255,1)'
+                backgroundColor: 'rgb(54, 162, 235)',
+                borderColor: 'rgba(54, 162, 235, 1)'
             },
             {
                 label: 'Female',
                 data: female,
-                backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                borderColor: 'rgba(255,255,1)'
+                backgroundColor: 'rgb(255, 99, 132)',
+                borderColor: 'rgba(255, 99, 132, 1)'
             }
         ]
     },
@@ -143,7 +174,51 @@ var myChart = new Chart(ctx, {
             },
             title: {
                 display: true,
-                text: 'Age-group Cases'
+                text: 'Chart-1: Age-group Cases',
+                position: 'bottom',
+            }
+        }
+    }
+});
+
+
+var ctx = document.getElementById('myChart_states').getContext('2d');
+
+var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: states,
+        datasets: [
+            {
+                label: 'Cases',
+                data: cases,
+                backgroundColor: 'rgb(255, 160, 66)',
+                borderColor: 'rgba(54, 162, 235, 1)'
+            },
+            {
+                label: 'Deaths',
+                data: deaths,
+                backgroundColor: 'rgb(255, 66, 66)',
+                borderColor: 'rgba(255, 99, 132, 1)'
+            },
+            {
+                label: 'Recoverd',
+                data: recovered,
+                backgroundColor: 'rgb(80, 179, 4)',
+                borderColor: 'rgba(255, 99, 132, 1)'
+            }
+        ]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom',
+            },
+            title: {
+                display: true,
+                text: 'Chart-2: State wise Deaths & Cases',
+                position: 'bottom'
             }
         }
     }
@@ -151,7 +226,8 @@ var myChart = new Chart(ctx, {
 
 
 
-
-// getData();
-// getDays();
+getData();
+getDays();
 getAge();
+
+getStates();
