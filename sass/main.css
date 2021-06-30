@@ -164,7 +164,7 @@ a {
 }
 
 .header__navbar a {
-  color: #dee5e9;
+  color: #010b11;
   font-weight: bolder;
   padding: 5px 10px;
   -webkit-transition: all 200ms ease-in-out;
@@ -172,7 +172,7 @@ a {
 }
 
 .header__navbar a:hover {
-  background-color: #5a666b;
+  background-color: #cde2eb;
   border-radius: 3px;
   border-bottom: 1px solid white;
 }
@@ -267,6 +267,18 @@ a {
 .article__left .days table {
   width: 60%;
   border-collapse: collapse;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+}
+
+.article__left .days table:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-box-shadow: 10px 10px 30px rgba(172, 197, 221, 0.15);
+          box-shadow: 10px 10px 30px rgba(172, 197, 221, 0.15);
+  cursor: pointer;
 }
 
 @media (max-width: 63.9375em) {

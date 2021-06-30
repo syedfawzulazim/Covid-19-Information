@@ -44,6 +44,14 @@
       table {
         width: 60%;
         border-collapse: collapse;
+        transition: transform 300ms ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+          box-shadow: 10px 10px 30px
+            rgba($color: rgb(172, 197, 221), $alpha: 0.15);
+          cursor: pointer;
+        }
       }
       @include breakpoint-down(medium) {
         margin: 0 auto;
