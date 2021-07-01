@@ -15,10 +15,12 @@ function openMenu() {
 }
 
 
+
 getData();
 getDays();
 
 
-getAge();
-
+chart_1();
 chart_2();
+
+vacc();

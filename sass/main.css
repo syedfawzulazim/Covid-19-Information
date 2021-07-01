@@ -208,7 +208,7 @@ a {
 
 .article {
   width: 100%;
-  height: calc(100vh - 60px);
+  height: 100%;
   min-height: 350px;
   color: #fff;
   background: -webkit-gradient(linear, left top, right top, from(#314755), to(#26a0da));
@@ -267,10 +267,8 @@ a {
 .article__left .days table {
   width: 60%;
   border-collapse: collapse;
-  -webkit-transition: -webkit-transform 300ms ease-in-out;
-  transition: -webkit-transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out;
-  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .article__left .days table:hover {
@@ -279,12 +277,22 @@ a {
   -webkit-box-shadow: 10px 10px 30px rgba(172, 197, 221, 0.15);
           box-shadow: 10px 10px 30px rgba(172, 197, 221, 0.15);
   cursor: pointer;
+  margin: 10px 0;
 }
 
 @media (max-width: 63.9375em) {
   .article__left .days {
     margin: 0 auto;
   }
+}
+
+.article__left .vacc {
+  background-color: #d9ebe1;
+  width: 600px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 50px 10px 10px;
+  margin: 40px auto;
 }
 
 .article__grid {
