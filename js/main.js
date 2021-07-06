@@ -16,11 +16,13 @@ function openMenu() {
 
 
 
-getData();
-getDays();
+// getData();
+// getDays();
 
 
-chart_1();
-chart_2();
+// chart_1();
+// chart_2();
 
-vacc();
+// chart_3();
+chart_4();
+
