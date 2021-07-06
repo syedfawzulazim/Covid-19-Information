@@ -164,14 +164,17 @@ a {
 }
 
 .header__navbar a {
-  color: #010b11;
+  color: #c1e3f8;
   font-weight: bolder;
-  padding: 5px 10px;
+  padding: 10px 10px;
+  background-color: #18465a;
+  border-radius: 13px;
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
 
 .header__navbar a:hover {
+  color: #060d11;
   background-color: #cde2eb;
   border-radius: 3px;
   border-bottom: 1px solid white;

@@ -1,7 +1,6 @@
 //Mobile Menu
 
 const menuBar = document.querySelector(".header__menu");
-
 let firstTime = 0;
 
 function openMenu() {
@@ -15,14 +14,48 @@ function openMenu() {
 }
 
 
+//Last update of data
 
-// getData();
-// getDays();
+const lastUpdate = document.querySelector('#time');
+lastUpdate.textContent += Date().slice(0, 24);
 
 
-// chart_1();
-// chart_2();
+/*
+    Gets total number of covid cases, deaths,
+    recoverd and last week cases
+*/
 
-// chart_3();
-chart_4();
+//getData();
+
+/*
+    Gets total number of covid cases and
+    recoverd patients from last week
+*/
+
+//getSevenDaysData();
+
+
+/*
+    Shows bar chart of age-grouped cases
+*/
+
+//chart_1();
+
+/*
+    Shows german state wise cases, deaths and recovered patients number
+*/
+
+//chart_2();
+
+/*
+    Shows vaccination status in a line chart
+*/
+
+//chart_3();
+
+/*
+    Shows different vaccine taken by people in pie chart
+*/
+
+//chart_4();
 

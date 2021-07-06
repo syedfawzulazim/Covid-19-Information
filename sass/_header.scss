@@ -12,11 +12,14 @@
 
   &__navbar {
     a {
-      color: #010b11;
+      color: #c1e3f8;
       font-weight: bolder;
-      padding: 5px 10px;
+      padding: 10px 10px;
+      background-color: rgb(24, 70, 90);
+      border-radius: 13px;
       transition: all 200ms ease-in-out;
       &:hover {
+        color: #060d11;
         background-color: rgb(205, 226, 235);
         border-radius: 3px;
         border-bottom: 1px solid rgb(255, 255, 255);
