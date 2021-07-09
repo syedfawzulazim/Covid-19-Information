@@ -20,6 +20,7 @@ const lastUpdate = document.querySelector('#time');
 lastUpdate.textContent += Date().slice(0, 24);
 
 
+
 /*
     Gets total number of covid cases, deaths,
     recoverd and last week cases
@@ -59,3 +60,12 @@ lastUpdate.textContent += Date().slice(0, 24);
 
 //chart_4();
 
+
+// getData();
+// getSevenDaysData();
+// chart_1();
+// chart_2();
+// chart_3();
+// chart_4();
+
+test();

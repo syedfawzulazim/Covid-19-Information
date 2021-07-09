@@ -26,7 +26,7 @@
     .article__title {
       text-align: center;
       padding: 5px;
-      background-color: rgb(19, 14, 6);
+      background-color: rgb(16, 71, 71);
     }
     .article__text {
       text-align: center;
@@ -38,7 +38,7 @@
       th,
       td {
         border: 1px solid rgb(240, 227, 227);
-        padding: 5px;
+        padding: 3px;
         text-align: center;
       }
       table {
@@ -56,6 +56,48 @@
       }
       @include breakpoint-down(medium) {
         margin: 0 auto;
+      }
+    }
+
+    .bot {
+      .test {
+        background-color: #0d2835;
+        width: 400px;
+        height: 320px;
+        margin: 40px auto;
+        padding: 20px;
+
+        table,
+        th,
+        td {
+          border: 2px solid rgb(122, 213, 216);
+          padding: 3px 15px;
+          text-align: center;
+          background-color: #f0f0f0fb;
+          color: #223d50;
+          margin-bottom: 10px;
+        }
+        th {
+          background-color: rgb(7, 68, 68);
+          color: rgb(233, 233, 233);
+        }
+        table {
+          width: 60%;
+          border-collapse: collapse;
+          transition: all 300ms ease-in-out;
+
+          &:hover {
+            transform: scale(1.05);
+            box-shadow: 10px 10px 30px
+              rgba($color: rgb(172, 197, 221), $alpha: 0.15);
+            cursor: pointer;
+            margin: 10px 0;
+          }
+        }
+        .details {
+          color: rgb(156, 163, 168);
+          font-size: small;
+        }
       }
     }
   }
