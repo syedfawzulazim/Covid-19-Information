@@ -3,6 +3,7 @@
 
 <head>
     <title>Covid-19 Information</title>
+    <meta name="description" content="covid 19 information using RKI API for germany">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
     <link rel="stylesheet" href="/sass/main.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.4.0/dist/chart.min.js"></script>
+    <link rel="icon" sizes="192x192" href="/sass/favicon-32x32.png">
 
 </head>
 
@@ -128,11 +130,12 @@
                 </table>
             </div>
 
-            <div class="bot flex flex-jc-sb flex-ai-c">
+            <div class="bot flex flex-jc-sa">
 
                 <div class="sec_1">
                     <div class="test">
                         <table>
+                            <caption>Weekly Data About Testing</caption>
                             <thead>
                                 <tr>
                                     <th>CW*</th>
@@ -155,8 +158,51 @@
                 </div>
 
                 <div class="sec_2">
-                    <h1>s2</h1>
+                    <canvas id="myChart_5"></canvas>
                 </div>
+            </div>
+
+            <div class="news">
+                <h3><b>Quality data sources published by Bundesländer:</b></h3>
+
+                <p> 1. Bayern : <a
+                        href="https://www.lgl.bayern.de/gesundheit/infektionsschutz/infektionskrankheiten_a_z/coronavirus/karte_coronavirus/index.htm">case
+                        numbers, map, LK table</a></p>
+                <p> 2. Berlin : <a href="https://www.berlin.de/corona/lagebericht/">case numbers, map, intensive care
+                        numbers</a></p>
+                <p> 3. Baden-Württemberg : <a
+                        href="https://sozialministerium.baden-wuerttemberg.de/de/gesundheit-pflege/gesundheitsschutz/infektionsschutz-hygiene/informationen-zu-coronavirus/">case
+                        numbers, map, discussion</a>
+                </p>
+                <p> 4. Brandenburg : <a
+                        href="https://msgiv.brandenburg.de/msgiv/de/presse/pressemitteilungen/"></a>press releases</p>
+
+                <p> 5. Bremen : <a
+                        href="https://www.gesundheit.bremen.de/sixcms/detail.php?gsid=bremen229.c.32718.de">press
+                        release</a></p>
+                <p> 6. Hamburg : <a href="https://www.hamburg.de/coronavirus/">cases number</a></p>
+                <p> 7. Hessen : <a href="https://soziales.hessen.de/">press releases</a></p>
+                <p> 8. NRW : <a href="https://www.mags.nrw/coronavirus-fallzahlen-nrw">case numbers, LK table</a></p>
+                <p> 9. Mecklenburg-Vorpommern : <a href="https://www.regierung-mv.de/Aktuell/">press releases</a></p>
+                <p> 10. Niedersachsen : <a
+                        href="https://www.niedersachsen.de/Coronavirus/aktuelle_lage_in_niedersachsen/niedersachsen-aktuelle-fallzahlen-niedersachsen-200093.html">case
+                        numbers, map, LK table</a>
+                </p>
+                <p> 11. Rheinland-Pfalz : <a href="https://www.rlp.de/index.php?id=36295">case numbers, LK table</a></p>
+                <p> 12. Saarland : <a
+                        href="https://www.saarland.de/DE/portale/corona/service/aktuelle-lage/aktuelle-lage_node.html">case
+                        numbers</a>
+                </p>
+                <p> 13. Sachsen : <a href="https://www.coronavirus.sachsen.de/infektionsfaelle-in-sachsen-4151.html">
+                        case numbers, LK table, intensive care numbers</a></p>
+                <p> 14. Sachsen-Anhalt : <a href="https://ms.sachsen-anhalt.de/themen/gesundheit/aktuell/coronavirus/">
+                        case numbers, LK table, intensive care numbers</a></p>
+                <p> 15. Schleswig-Holstein : <a
+                        href="https://www.schleswig-holstein.de/DE/Landesregierung/I/Presse/_documents/Corona-Liste_Kreise.html">case
+                        numbers, LK table</a>
+                </p>
+                <p> 16. Thüringen : <a href="https://www.tmasgff.de/covid-19/fallzahlen">case numbers, LK table,
+                        intensive care numbers</a></p>
             </div>
 
         </div>
@@ -182,6 +228,7 @@
     <script src="/js/chart-2.js"></script>
     <script src="/js/chart-3.js"></script>
     <script src="/js/chart-4.js"></script>
+    <script src="/js/chart-5.js"></script>
     <script src="/js/test.js"></script>
 
 

@@ -58,8 +58,15 @@ a {
     justify-content: space-between;
   }
 
+  &-jc-sa {
+    justify-content: space-around;
+  }
+
   &-ai-c {
     align-items: center;
+  }
+  &-warp {
+    flex-wrap: wrap;
   }
 }
 

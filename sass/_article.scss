@@ -59,13 +59,16 @@
       }
     }
 
+    .sec_1 {
+      width: 40vw;
+    }
     .bot {
       .test {
         background-color: #0d2835;
-        width: 400px;
-        height: 320px;
+        width: min-content;
+        height: min-content;
         margin: 40px auto;
-        padding: 20px;
+        padding: 10px 20px;
 
         table,
         th,
@@ -81,6 +84,9 @@
           background-color: rgb(7, 68, 68);
           color: rgb(233, 233, 233);
         }
+        caption {
+          color: rgb(243, 243, 242);
+        }
         table {
           width: 60%;
           border-collapse: collapse;
@@ -91,13 +97,40 @@
             box-shadow: 10px 10px 30px
               rgba($color: rgb(172, 197, 221), $alpha: 0.15);
             cursor: pointer;
-            margin: 10px 0;
           }
         }
         .details {
           color: rgb(156, 163, 168);
           font-size: small;
         }
+      }
+    }
+
+    .sec_2 {
+      background-color: #0d2835;
+      width: 50vw;
+      margin: 30px;
+
+      canvas {
+        margin: 20px;
+        color: #fff;
+      }
+    }
+
+    .news {
+      background-color: #2f3e3f;
+      width: 50vw;
+      height: max-content;
+      margin: 80px auto 0px;
+      padding: 20px;
+      border-radius: 10px;
+      p {
+        font-weight: 400;
+      }
+      a {
+        font-size: small;
+        font-style: oblique;
+        color: burlywood;
       }
     }
   }
